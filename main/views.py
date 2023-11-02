@@ -26,21 +26,21 @@ def other_page(request, page):
 
 
 class BbLoginView(LoginView):
-    template_name = 'main/login.html'
+    template_name = 'main/accounts/login.html'
 
 
 @login_required
 def profile(request):
-    return render(request, template_name='main/profile.html')
+    return render(request, template_name='main/accounts/profile.html')
 
 
 class BbLogoutView(LoginRequiredMixin, LogoutView):
-    template_name = 'main/logout.html'
+    template_name = 'main/accounts/logout.html'
 
 
 class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = AdvUser
-    template_name = 'main/change_user_info.html'
+    template_name = 'main/accounts/change_user_info.html'
     form_class = ChangeUserInfoForm
     success_url = reverse_lazy('main:profile')
     success_message = 'Данные пользователя изменены'
@@ -56,6 +56,6 @@ class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
 
 
 class ChangeUserPasswordView(SuccessMessageMixin, LoginRequiredMixin, PasswordChangeView):
-    template_name = 'main/password_change.html'
+    template_name = 'main/accounts/password_change.html'
     success_url = reverse_lazy('main:profile')
     success_message = 'Пароль успешно изменен'

@@ -1,6 +1,7 @@
 header h1 {
-    background: url('bg.jpg') left / auto 100% no-repeat,
-                url('bg.jpg') right / auto 100% no-repeat;
+    background: url('bg.png') left / auto 100% no-repeat,
+                url('bg.png') right / auto 100% no-repeat;
+    margin-top: 10px;
 }
 
 .root {
