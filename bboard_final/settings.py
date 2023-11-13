@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'bootstrap4',
+    'django_cleanup',
+    'easy_thumbnails',
+    'captcha',
 
     'main.apps.MainConfig',
 ]
@@ -130,3 +133,5 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'main.AdvUser'
+
+EMAIL_PORT = 1025
